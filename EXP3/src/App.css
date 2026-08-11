@@ -1,0 +1,264 @@
+.container {
+    width: 90%;
+    max-width: 640px;
+    margin: 48px auto;
+    text-align: center;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-heading);
+    text-decoration: none;
+    letter-spacing: -0.3px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 18px;
+    flex: 1;
+}
+
+.navbar-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.15s ease;
+}
+
+.navbar-links a:hover {
+    color: var(--primary);
+}
+
+.navbar-auth {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-btn {
+    padding: 8px 16px;
+    border-radius: 7px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.navbar-btn:hover {
+    background: var(--primary-hover);
+}
+
+.navbar-btn.ghost {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.navbar-btn.ghost:hover {
+    background: var(--primary-light);
+}
+
+/* =========================
+   AUTH PAGES
+========================= */
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+.auth-card label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-light);
+    margin: 14px 0 4px;
+}
+
+.auth-card label:first-of-type {
+    margin-top: 0;
+}
+
+.auth-switch {
+    margin-top: 18px;
+    font-size: 14px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.auth-switch a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* =========================
+   ROLE PICKER
+========================= */
+
+.role-options {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.role-option {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid var(--input-border);
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text);
+    transition: all 0.15s ease;
+}
+
+.role-option:hover {
+    border-color: var(--primary);
+}
+
+.role-option.selected {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+/* =========================
+   ROLE BADGE
+========================= */
+
+.role-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: capitalize;
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.role-badge.admin {
+    background: rgba(220, 38, 38, 0.1);
+    color: var(--danger);
+}
+
+.role-badge.editor {
+    background: rgba(22, 163, 74, 0.12);
+    color: var(--success);
+}
+
+/* =========================
+   PROFILE FIELD ROWS
+========================= */
+
+.field-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+.field-row:last-child {
+    border-bottom: none;
+}
+
+.field-label {
+    color: var(--text-light);
+}
+
+.field-value {
+    font-weight: 600;
+    color: var(--text-heading);
+}
+
+/* =========================
+   ADMIN TABLE
+========================= */
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--text-light);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.admin-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+.admin-table select {
+    width: auto;
+    padding: 6px 10px;
+    font-size: 13px;
+}
+
+/* =========================
+   MESSAGE VARIANTS
+========================= */
+
+.message.error {
+    border-left-color: var(--danger);
+    color: var(--danger);
+}
+
+.message.success {
+    border-left-color: var(--success);
+    color: var(--success);
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+    text-align: center;
+    padding: 40px 24px;
+}

@@ -1,0 +1,393 @@
+:root {
+    --text: #5f6470;
+    --text-heading: #171923;
+    --text-light: #8b909b;
+
+    --bg: #f4f6f8;
+    --surface: #ffffff;
+
+    --border: #e1e4e8;
+    --input-border: #cfd4da;
+
+    --code-bg: #f1f3f5;
+
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --primary-light: rgba(79, 70, 229, 0.1);
+
+    --danger: #dc2626;
+    --danger-hover: #b91c1c;
+
+    --success: #16a34a;
+
+    --shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    --shadow-hover:
+        0 8px 25px rgba(0, 0, 0, 0.12);
+
+    --radius: 10px;
+
+    --font-sans:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    --font-mono:
+        ui-monospace,
+        SFMono-Regular,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: var(--text);
+    background: var(--bg);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   ROOT
+========================= */
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    color: var(--text-heading);
+    font-family: var(--font-sans);
+}
+
+h1 {
+    margin-bottom: 8px;
+
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+h2 {
+    margin-bottom: 16px;
+
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* =========================
+   PARAGRAPHS
+========================= */
+
+p {
+    margin: 0;
+}
+
+.subtitle {
+    margin-bottom: 25px;
+    color: var(--text-light);
+    font-size: 15px;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+
+input,
+select,
+button {
+    font: inherit;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid var(--input-border);
+    border-radius: 7px;
+
+    background: var(--surface);
+    color: var(--text-heading);
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px var(--primary-light);
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    padding: 11px 20px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: var(--primary);
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease,
+        opacity 0.2s ease;
+}
+
+button:hover {
+    background: var(--primary-hover);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    padding: 24px;
+    margin: 20px 0;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    width: 100%;
+
+    padding: 14px 16px;
+    margin: 20px 0;
+
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+
+    border-radius: 7px;
+
+    background: var(--surface);
+    color: var(--text-heading);
+
+    text-align: left;
+}
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+
+.logout {
+    background: var(--danger);
+}
+
+.logout:hover {
+    background: var(--danger-hover);
+}
+
+/* =========================
+   CODE / API RESPONSE
+========================= */
+
+code,
+pre,
+.counter {
+    font-family: var(--font-mono);
+}
+
+code {
+    display: inline-flex;
+
+    padding: 4px 8px;
+
+    border-radius: 5px;
+
+    background: var(--code-bg);
+    color: var(--text-heading);
+
+    font-size: 14px;
+}
+
+pre {
+    width: 100%;
+
+    margin: 0;
+    padding: 16px;
+
+    overflow-x: auto;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    background: var(--code-bg);
+    color: var(--text-heading);
+
+    text-align: left;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .card {
+        padding: 20px;
+        margin: 16px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #a1a1aa;
+        --text-heading: #f4f4f5;
+        --text-light: #71717a;
+
+        --bg: #111318;
+        --surface: #1a1c22;
+
+        --border: #2b2e36;
+        --input-border: #3f424c;
+
+        --code-bg: #20232b;
+
+        --primary: #6366f1;
+        --primary-hover: #818cf8;
+        --primary-light: rgba(99, 102, 241, 0.15);
+
+        --danger: #ef4444;
+        --danger-hover: #dc2626;
+
+        --shadow:
+            0 4px 15px rgba(0, 0, 0, 0.3);
+
+        --shadow-hover:
+            0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    input,
+    select {
+        background: #181a20;
+        color: var(--text-heading);
+    }
+
+    input::placeholder {
+        color: #71717a;
+    }
+}
